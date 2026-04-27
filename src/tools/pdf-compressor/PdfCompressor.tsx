@@ -360,7 +360,7 @@ export default function PdfCompressor() {
     try {
       const originalPdfBytes = new Uint8Array(await file.arrayBuffer());
       const originalPdfBlob = new Blob([toArrayBuffer(originalPdfBytes)], { type: "application/pdf" });
-      const workCanvas = workCanvasRef.current ?? document.createElement("canvas");
+      const workCanvas = document.createElement("canvas");
 
       const profiles = mode === "light"
         ? [{ key: "light", label: "Light quality-preserving profile", mode: "light" as const }]
@@ -651,7 +651,7 @@ export default function PdfCompressor() {
     <div className="mx-auto max-w-4xl space-y-6">
       <div className="text-center mb-8">
         <p className="text-sm text-[var(--color-text-muted)]">
-          Compress PDFs in your browser with Light, Recommended, and Strong modes inspired by iLovePDF.
+          Compress PDFs in your browser with Light, Recommended, and Strong modes.
         </p>
       </div>
 

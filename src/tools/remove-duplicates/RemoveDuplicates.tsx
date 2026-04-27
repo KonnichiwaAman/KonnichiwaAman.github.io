@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useDeferredValue } from "react";
 import { Copy, Check, Download } from "lucide-react";
 
 function downloadText(content: string, filename: string) {
@@ -21,8 +21,10 @@ export default function RemoveDuplicates() {
   const [sortResult, setSortResult] = useState(false);
   const [copied, setCopied] = useState(false);
 
+  const deferredInput = useDeferredValue(input);
+
   const processed = useMemo(() => {
-    const lines = input.split(/\r?\n/);
+    const lines = deferredInput.split(/\r?\n/);
     const seen = new Set<string>();
 
     const uniqueLines: string[] = [];
@@ -62,7 +64,7 @@ export default function RemoveDuplicates() {
       duplicateCount,
       skippedEmptyCount,
     };
-  }, [input, caseSensitive, trimWhitespace, keepEmpty, sortResult]);
+  }, [deferredInput, caseSensitive, trimWhitespace, keepEmpty, sortResult]);
 
   async function handleCopy() {
     if (!processed.output) return;

@@ -11,6 +11,7 @@ export function SeoHead({ metadata }: { metadata: SeoMetadata }) {
       imageUrl={metadata.imageUrl}
       ogType={metadata.ogType}
       noindex={metadata.noindex}
+      structuredData={metadata.structuredData}
     />
   );
 }

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useDeferredValue } from "react";
 import { Copy, Check, WandSparkles } from "lucide-react";
 
 function escapeRegExp(source: string) {
@@ -63,18 +63,22 @@ export default function FindReplace() {
   const [replaceAll, setReplaceAll] = useState(true);
   const [copied, setCopied] = useState(false);
 
+  const deferredInput = useDeferredValue(input);
+  const deferredFindText = useDeferredValue(findText);
+  const deferredReplaceText = useDeferredValue(replaceText);
+
   const result = useMemo(
     () =>
       runReplace(
-        input,
-        findText,
-        replaceText,
+        deferredInput,
+        deferredFindText,
+        deferredReplaceText,
         useRegex,
         matchCase,
         wholeWord,
         replaceAll,
       ),
-    [input, findText, replaceText, useRegex, matchCase, wholeWord, replaceAll],
+    [deferredInput, deferredFindText, deferredReplaceText, useRegex, matchCase, wholeWord, replaceAll],
   );
 
   async function handleCopy() {

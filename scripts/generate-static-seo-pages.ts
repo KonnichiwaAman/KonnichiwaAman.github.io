@@ -118,6 +118,14 @@ function buildSeoTags(metadata: SeoMetadata): string {
     );
   }
 
+  if (metadata.structuredData && metadata.structuredData.length > 0) {
+    tags.push(
+      `<script type="application/ld+json">`,
+      JSON.stringify(metadata.structuredData),
+      `</script>`,
+    );
+  }
+
   return tags.map((tag) => `    ${tag}`).join("\n");
 }
 

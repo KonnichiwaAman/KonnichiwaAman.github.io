@@ -411,16 +411,20 @@ async function dedupeDuplicateImageObjects(pdfDoc: PDFDocument): Promise<number>
 
 // ─── Image Decoding ─────────────────────────────────────────────────
 
-async function decodeEncodedImage(bytes: Uint8Array, mimeType: string): Promise<HTMLCanvasElement | null> {
+async function decodeEncodedImage(bytes: Uint8Array, mimeType: string): Promise<HTMLCanvasElement | OffscreenCanvas | null> {
   const blob = new Blob([toArrayBuffer(bytes)], { type: mimeType });
 
-  if ("createImageBitmap" in window) {
+  if ("createImageBitmap" in globalThis) {
     try {
       const bitmap = await createImageBitmap(blob);
-      const canvas = document.createElement("canvas");
-      canvas.width = bitmap.width;
-      canvas.height = bitmap.height;
-      const context = canvas.getContext("2d");
+      const canvas = typeof OffscreenCanvas !== "undefined"
+        ? new OffscreenCanvas(bitmap.width, bitmap.height)
+        : document.createElement("canvas");
+      if (!(canvas instanceof OffscreenCanvas)) {
+        canvas.width = bitmap.width;
+        canvas.height = bitmap.height;
+      }
+      const context = canvas.getContext("2d") as CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D | null;
       if (!context) {
         bitmap.close();
         return null;
@@ -438,10 +442,14 @@ async function decodeEncodedImage(bytes: Uint8Array, mimeType: string): Promise<
     const image = new Image();
     image.decoding = "async";
     image.onload = () => {
-      const canvas = document.createElement("canvas");
-      canvas.width = image.naturalWidth || image.width;
-      canvas.height = image.naturalHeight || image.height;
-      const context = canvas.getContext("2d");
+      const canvas = typeof OffscreenCanvas !== "undefined"
+        ? new OffscreenCanvas(image.naturalWidth || image.width, image.naturalHeight || image.height)
+        : document.createElement("canvas");
+      if (!(canvas instanceof OffscreenCanvas)) {
+        canvas.width = image.naturalWidth || image.width;
+        canvas.height = image.naturalHeight || image.height;
+      }
+      const context = canvas.getContext("2d") as CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D | null;
       URL.revokeObjectURL(url);
       if (!context) {
         resolve(null);
@@ -488,7 +496,7 @@ function decodeMaskAlpha(pdfDoc: PDFDocument, smaskRef: PDFRef, width: number, h
   }
 }
 
-function decodeRawPixelImage(pdfDoc: PDFDocument, stream: PDFRawStream): HTMLCanvasElement | null {
+function decodeRawPixelImage(pdfDoc: PDFDocument, stream: PDFRawStream): HTMLCanvasElement | OffscreenCanvas | null {
   const dict = stream.dict;
   const width = lookupNumber(dict, "Width") ?? 0;
   const height = lookupNumber(dict, "Height") ?? 0;
@@ -554,10 +562,14 @@ function decodeRawPixelImage(pdfDoc: PDFDocument, stream: PDFRawStream): HTMLCan
     rgba[targetIndex + 3] = alpha ? alpha[pixelIndex] : 255;
   }
 
-  const canvas = document.createElement("canvas");
-  canvas.width = width;
-  canvas.height = height;
-  const context = canvas.getContext("2d");
+  const canvas = typeof OffscreenCanvas !== "undefined"
+    ? new OffscreenCanvas(width, height)
+    : document.createElement("canvas");
+  if (!(canvas instanceof OffscreenCanvas)) {
+    canvas.width = width;
+    canvas.height = height;
+  }
+  const context = canvas.getContext("2d") as CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D | null;
   if (!context) return null;
 
   context.putImageData(new ImageData(rgba, width, height), 0, 0);
@@ -650,19 +662,25 @@ function buildCompressionCandidates(
   ];
 }
 
-function canvasToBlob(canvas: HTMLCanvasElement, quality: number): Promise<Blob | null> {
+function canvasToBlob(canvas: HTMLCanvasElement | OffscreenCanvas, quality: number): Promise<Blob | null> {
+  if (canvas instanceof OffscreenCanvas) {
+    return canvas.convertToBlob({ type: "image/jpeg", quality });
+  }
   return new Promise((resolve) => {
     canvas.toBlob((blob) => resolve(blob), "image/jpeg", quality);
   });
 }
 
-function canvasToPngBlob(canvas: HTMLCanvasElement): Promise<Blob | null> {
+function canvasToPngBlob(canvas: HTMLCanvasElement | OffscreenCanvas): Promise<Blob | null> {
+  if (canvas instanceof OffscreenCanvas) {
+    return canvas.convertToBlob({ type: "image/png" });
+  }
   return new Promise((resolve) => {
     canvas.toBlob((blob) => resolve(blob), "image/png");
   });
 }
 
-async function decodeImageEntry(pdfDoc: PDFDocument, entry: ImageStreamEntry): Promise<HTMLCanvasElement | null> {
+async function decodeImageEntry(pdfDoc: PDFDocument, entry: ImageStreamEntry): Promise<HTMLCanvasElement | OffscreenCanvas | null> {
   const filterNames = getFilterNames(entry.stream.dict);
 
   if (filterNames.length === 1 && filterNames[0] === "DCTDecode") {
@@ -684,7 +702,7 @@ async function optimizeImageEntry(
   pdfDoc: PDFDocument,
   entry: ImageStreamEntry,
   mode: CompressionMode,
-  workCanvas: HTMLCanvasElement,
+  workCanvas: HTMLCanvasElement | OffscreenCanvas,
 ): Promise<boolean> {
   if (mode === "light") return false;
 

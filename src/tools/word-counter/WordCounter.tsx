@@ -1,21 +1,23 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useDeferredValue } from "react";
 import { Copy, Check } from "lucide-react";
 
 export default function WordCounter() {
   const [text, setText] = useState("");
   const [copied, setCopied] = useState(false);
 
+  const deferredText = useDeferredValue(text);
+
   const stats = useMemo(() => {
-    const trimmed = text.trim();
+    const trimmed = deferredText.trim();
     if (!trimmed) {
       return { words: 0, characters: 0, charactersNoSpaces: 0, sentences: 0, paragraphs: 0, readingTime: "0 sec" };
     }
 
-    const words = trimmed.split(/\s+/).filter(Boolean).length;
-    const characters = text.length;
-    const charactersNoSpaces = text.replace(/\s/g, "").length;
-    const sentences = trimmed.split(/[.!?]+/).filter((s) => s.trim().length > 0).length;
-    const paragraphs = trimmed.split(/\n\s*\n/).filter((p) => p.trim().length > 0).length;
+    const words = trimmed.split(/\s+/).length;
+    const characters = deferredText.length;
+    const charactersNoSpaces = deferredText.replace(/\s+/g, "").length;
+    const sentences = trimmed.split(/[.!?]+/).filter(Boolean).length;
+    const paragraphs = trimmed.split(/\n\s*\n/).length;
 
     const minutes = Math.floor(words / 200);
     const seconds = Math.round((words % 200) / (200 / 60));
@@ -23,7 +25,7 @@ export default function WordCounter() {
       minutes > 0 ? `${minutes} min ${seconds} sec` : `${seconds} sec`;
 
     return { words, characters, charactersNoSpaces, sentences, paragraphs, readingTime };
-  }, [text]);
+  }, [deferredText]);
 
   const statCards = [
     { label: "Words", value: stats.words },

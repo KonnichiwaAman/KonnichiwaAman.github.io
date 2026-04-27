@@ -33,10 +33,10 @@ export function ToolSeoContent({
         </p>
       </section>
 
-      <details className="mt-4 rounded-lg border border-[var(--color-border-primary)] bg-[var(--color-bg-secondary)] px-4 py-3">
-        <summary className="cursor-pointer text-sm font-semibold text-[var(--color-text-primary)]">
-          Read the full local-processing guide
-        </summary>
+      <section aria-labelledby={`${slug}-guide`} className="mt-4 rounded-lg border border-[var(--color-border-primary)] bg-[var(--color-bg-secondary)] px-4 py-4">
+        <h3 id={`${slug}-guide`} className="text-sm font-semibold text-[var(--color-text-primary)]">
+          Local-Processing Guide
+        </h3>
 
         <div className="mt-3 space-y-3 text-sm leading-relaxed text-[var(--color-text-secondary)]">
           <p>
@@ -55,7 +55,7 @@ export function ToolSeoContent({
             clean minimalist interface that keeps the core action front and center.
           </p>
         </div>
-      </details>
+      </section>
 
       <section aria-labelledby={`${slug}-faq`} className="mt-5">
         <h2

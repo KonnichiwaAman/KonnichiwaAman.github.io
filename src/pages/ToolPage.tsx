@@ -81,15 +81,31 @@ export function ToolPage() {
       <div className="mx-auto max-w-4xl py-8 pl-[max(1rem,var(--safe-area-left))] pr-[max(1rem,var(--safe-area-right))] sm:px-6 sm:py-10 lg:px-8">
         <article>
           {category && (
-            <Link
-              to={category.path}
-              aria-label={`Back to ${category.name}`}
-              className="inline-flex items-center gap-2 text-sm text-[var(--color-text-muted)]
-                     transition-colors duration-200 md:hover:text-[var(--color-text-primary)]"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to {category.name}
-            </Link>
+            <nav aria-label="Breadcrumb" className="mb-2">
+              <ol className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
+                <li>
+                  <Link
+                    to="/"
+                    className="transition-colors duration-200 md:hover:text-[var(--color-text-primary)]"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li aria-hidden="true" className="text-[var(--color-border-hover)]">/</li>
+                <li>
+                  <Link
+                    to={category.path}
+                    className="transition-colors duration-200 md:hover:text-[var(--color-text-primary)]"
+                  >
+                    {category.name}
+                  </Link>
+                </li>
+                <li aria-hidden="true" className="text-[var(--color-border-hover)]">/</li>
+                <li className="font-medium text-[var(--color-text-secondary)]" aria-current="page">
+                  {tool.name}
+                </li>
+              </ol>
+            </nav>
           )}
 
           <header className="mt-5 flex items-start gap-3.5 sm:mt-6 sm:items-center sm:gap-4">

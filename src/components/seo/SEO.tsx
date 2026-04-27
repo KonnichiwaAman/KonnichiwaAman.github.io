@@ -15,6 +15,7 @@ interface SEOProps {
   imageUrl?: string;
   ogType?: "website" | "article";
   noindex?: boolean;
+  structuredData?: Record<string, unknown>[];
 }
 
 const INDEX_ROBOTS = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1";
@@ -47,6 +48,7 @@ export function SEO({
   imageUrl,
   ogType,
   noindex,
+  structuredData,
 }: SEOProps) {
   const canonicalUrl = toAbsoluteUrl(path);
   const ogImage = normalizeImageUrl(imageUrl);
@@ -92,6 +94,12 @@ export function SEO({
       ) : null}
       {normalizedTwitterHandle ? (
         <meta name="twitter:creator" content={normalizedTwitterHandle} />
+      ) : null}
+
+      {structuredData && structuredData.length > 0 ? (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       ) : null}
     </Helmet>
   );

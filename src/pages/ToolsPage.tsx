@@ -54,7 +54,24 @@ export function ToolsPage() {
       <div className="relative mx-auto max-w-7xl py-7 pl-[max(1rem,var(--safe-area-left))] pr-[max(1rem,var(--safe-area-right))] sm:px-6 sm:py-9 lg:px-8 lg:py-12">
         <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-44 bg-[radial-gradient(circle_at_top,rgba(161,161,170,0.12),transparent_72%)] sm:h-56" />
 
-        <header className="rounded-3xl border border-[var(--color-border-primary)] bg-[var(--color-bg-card)] p-5 sm:p-7 lg:p-8">
+        <nav aria-label="Breadcrumb" className="mb-2">
+          <ol className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
+            <li>
+              <Link
+                to="/"
+                className="transition-colors duration-200 md:hover:text-[var(--color-text-primary)]"
+              >
+                Home
+              </Link>
+            </li>
+            <li aria-hidden="true" className="text-[var(--color-border-hover)]">/</li>
+            <li className="font-medium text-[var(--color-text-secondary)]" aria-current="page">
+              All Tools
+            </li>
+          </ol>
+        </nav>
+
+        <header className="mt-3 rounded-3xl border border-[var(--color-border-primary)] bg-[var(--color-bg-card)] p-5 sm:p-7 lg:p-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[var(--color-border-primary)] bg-[var(--color-bg-primary)] px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-[var(--color-text-secondary)]">
