@@ -3,4 +3,5 @@ Allow: /
 Disallow: /404
 Host: obsidiankit.me
 Sitemap: https://obsidiankit.me/sitemap.xml
+# LLM Index: https://obsidiankit.me/llms.txt
 # Generated: 2026-04-27

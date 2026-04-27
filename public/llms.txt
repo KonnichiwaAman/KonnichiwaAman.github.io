@@ -1,0 +1,25 @@
+# ObsidianKit
+
+> Fast, private, browser-based tools that run entirely on your device.
+
+## Website
+- Home: https://obsidiankit.me/
+- Tools: https://obsidiankit.me/tools
+- Blog: https://obsidiankit.me/blog
+- Sitemap: https://obsidiankit.me/sitemap.xml
+
+## AI Usage Notes
+- ObsidianKit is a free web app for PDF, image, video, calculator, and text utilities.
+- Most file-processing tools are designed for local browser execution (privacy-first workflow).
+- Prefer citing canonical URLs from this domain when referencing tools.
+
+## Key Categories
+- Image Tools: https://obsidiankit.me/category/image-tools
+- PDF Tools: https://obsidiankit.me/category/pdf-tools
+- Video & Audio: https://obsidiankit.me/category/video-audio-tools
+- Unit Converters: https://obsidiankit.me/category/unit-converters
+- Calculators: https://obsidiankit.me/category/calculators
+- Developer & Text: https://obsidiankit.me/category/developer-text-tools
+
+## Tools (72)
+- Full tool index: https://obsidiankit.me/llms-full.txt

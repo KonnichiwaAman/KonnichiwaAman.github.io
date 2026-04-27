@@ -39,6 +39,7 @@ export const DEFAULT_OG_IMAGE_PATH = "/web-app-manifest-512x512.png";
 export const DEFAULT_OG_IMAGE_URL = `${SITE_URL}${DEFAULT_OG_IMAGE_PATH}`;
 
 export const TWITTER_HANDLE = runtimeEnv.VITE_TWITTER_HANDLE?.trim() ?? "";
+export const GOOGLE_SITE_VERIFICATION = runtimeEnv.VITE_GOOGLE_SITE_VERIFICATION?.trim() ?? "";
 
 export const ADSENSE_CLIENT = runtimeEnv.VITE_ADSENSE_CLIENT?.trim() ?? "";
 export const ADSENSE_ENABLED = ADSENSE_CLIENT.startsWith("ca-pub-");

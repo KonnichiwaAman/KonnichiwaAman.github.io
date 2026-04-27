@@ -1,0 +1,161 @@
+# ObsidianKit Full Index
+
+Generated for AI and search consumption. Total tools: 72.
+
+## All Tools
+- PNG to JPG: https://obsidiankit.me/tool/png-to-jpg
+  Convert PNG images to JPG format instantly
+- JPG to PNG: https://obsidiankit.me/tool/jpg-to-png
+  Convert JPG images to PNG format with transparency support
+- WebP Converter: https://obsidiankit.me/tool/webp-converter
+  Convert images to and from WebP format
+- HEIC to JPG: https://obsidiankit.me/tool/heic-to-jpg
+  Convert Apple HEIC photos to universal JPG format
+- Image Resizer: https://obsidiankit.me/tool/image-resizer
+  Resize images by pixels, percentage, or social media presets
+- Image Compressor: https://obsidiankit.me/tool/image-compressor
+  Reduce image file size while maintaining visual quality
+- Image Rotator: https://obsidiankit.me/tool/image-rotator
+  Rotate and flip images in any direction
+- Image Cropper: https://obsidiankit.me/tool/image-cropper
+  Crop images to custom dimensions or aspect ratios
+- EXIF Data Remover: https://obsidiankit.me/tool/exif-remover
+  Strip metadata, GPS data, and EXIF info from images
+- PDF to Image: https://obsidiankit.me/tool/pdf-to-image
+  Convert PDF pages to JPG or PNG images
+- Add Watermark: https://obsidiankit.me/tool/watermark-adder
+  Add text or image watermarks to your photos
+- Background Remover: https://obsidiankit.me/tool/background-remover
+  Remove backgrounds from images automatically
+- PDF Compressor: https://obsidiankit.me/tool/pdf-compressor
+  Reduce PDF file size without losing quality
+- Merge PDFs: https://obsidiankit.me/tool/merge-pdf
+  Combine multiple PDF files into a single document
+- Split PDF: https://obsidiankit.me/tool/split-pdf
+  Extract pages or split a PDF into multiple files
+- PDF to Word: https://obsidiankit.me/tool/pdf-to-word
+  Convert PDF documents to editable Word files
+- Word to PDF: https://obsidiankit.me/tool/word-to-pdf
+  Convert Word documents to PDF format
+- PDF to Text: https://obsidiankit.me/tool/pdf-to-txt
+  Extract all text content from a PDF document
+- Rotate PDF: https://obsidiankit.me/tool/pdf-rotator
+  Fix the orientation of PDF pages
+- Protect PDF: https://obsidiankit.me/tool/protect-pdf
+  Add password protection to your PDF files
+- Unlock PDF: https://obsidiankit.me/tool/unlock-pdf
+  Remove password from a protected PDF
+- PDF Editor: https://obsidiankit.me/tool/pdf-editor
+  Add text, images, and annotations to PDFs
+- PDF Metadata: https://obsidiankit.me/tool/pdf-metadata
+  View and remove metadata from PDF files
+- PDF OCR: https://obsidiankit.me/tool/pdf-ocr
+  Convert scanned PDFs to searchable, editable text
+- PDF Page Numbers: https://obsidiankit.me/tool/pdf-page-numbers
+  Add page numbers, headers, and footers to PDFs
+- Reorder PDF Pages: https://obsidiankit.me/tool/pdf-reorder
+  Rearrange the page order of your PDF
+- Video Compressor: https://obsidiankit.me/tool/video-compressor
+  Reduce video file size while preserving quality
+- Video Trimmer: https://obsidiankit.me/tool/video-trimmer
+  Cut and trim video clips to the desired length
+- Video Resizer: https://obsidiankit.me/tool/video-resizer
+  Change video resolution and aspect ratio
+- MP4 to AVI: https://obsidiankit.me/tool/mp4-to-avi
+  Convert MP4 video files to AVI format
+- MP4 to MOV: https://obsidiankit.me/tool/mp4-to-mov
+  Convert MP4 video files to MOV format
+- Video to Audio: https://obsidiankit.me/tool/video-to-audio
+  Extract MP3 or WAV audio from any video file
+- Video to GIF: https://obsidiankit.me/tool/video-to-gif
+  Convert video clips into animated GIF images
+- Frame Extractor: https://obsidiankit.me/tool/frame-extractor
+  Extract individual frames from video files
+- Audio Compressor: https://obsidiankit.me/tool/audio-compressor
+  Reduce audio file size without quality loss
+- MP3 to WAV: https://obsidiankit.me/tool/mp3-to-wav
+  Convert MP3 audio files to WAV format
+- Audio Speed Changer: https://obsidiankit.me/tool/audio-speed-changer
+  Speed up or slow down audio playback
+- Length Converter: https://obsidiankit.me/tool/length-converter
+  Convert between inches, cm, feet, meters, km, and miles
+- Weight Converter: https://obsidiankit.me/tool/weight-converter
+  Convert between kg, lbs, grams, ounces, and tons
+- Temperature Converter: https://obsidiankit.me/tool/temperature-converter
+  Convert between Celsius, Fahrenheit, and Kelvin
+- Volume Converter: https://obsidiankit.me/tool/volume-converter
+  Convert between liters, gallons, cups, ml, and more
+- Area Converter: https://obsidiankit.me/tool/area-converter
+  Convert between sq ft, sq m, acres, hectares, and more
+- Speed Converter: https://obsidiankit.me/tool/speed-converter
+  Convert between mph, km/h, knots, and m/s
+- Data Storage Converter: https://obsidiankit.me/tool/data-storage-converter
+  Convert between bytes, KB, MB, GB, and TB
+- Currency Converter: https://obsidiankit.me/tool/currency-converter
+  Convert between world currencies with live rates
+- Cooking Converter: https://obsidiankit.me/tool/cooking-converter
+  Convert between cups, tablespoons, ml, and more
+- Time Converter: https://obsidiankit.me/tool/time-converter
+  Convert between seconds, minutes, hours, days, and years
+- BMI Calculator: https://obsidiankit.me/tool/bmi-calculator
+  Calculate your Body Mass Index and health category
+- Age Calculator: https://obsidiankit.me/tool/age-calculator
+  Calculate exact age from your date of birth
+- Loan Calculator: https://obsidiankit.me/tool/loan-calculator
+  Calculate monthly EMI, total interest, and payment schedules
+- Compound Interest: https://obsidiankit.me/tool/compound-interest
+  Calculate compound interest over time with detailed breakdown
+- Salary Calculator: https://obsidiankit.me/tool/salary-calculator
+  Convert between hourly, monthly, and annual salary
+- Percentage Calculator: https://obsidiankit.me/tool/percentage-calculator
+  Calculate percentages, increases, decreases, and ratios
+- Scientific Calculator: https://obsidiankit.me/tool/scientific-calculator
+  Advanced calculator with trigonometry and scientific functions
+- GPA Calculator: https://obsidiankit.me/tool/gpa-calculator
+  Calculate your Grade Point Average from course grades
+- Tip Calculator: https://obsidiankit.me/tool/tip-calculator
+  Calculate tip amounts and split bills between people
+- Fuel Economy: https://obsidiankit.me/tool/fuel-economy
+  Calculate fuel cost and consumption for your trips
+- Word Counter: https://obsidiankit.me/tool/word-counter
+  Count words, characters, sentences, and paragraphs
+- Case Converter: https://obsidiankit.me/tool/case-converter
+  Convert text to uppercase, lowercase, title case, and more
+- Remove Duplicates: https://obsidiankit.me/tool/remove-duplicates
+  Remove duplicate lines from text instantly
+- Find & Replace: https://obsidiankit.me/tool/find-replace
+  Find and replace text with support for regex patterns
+- Password Generator: https://obsidiankit.me/tool/password-generator
+  Generate strong, secure random passwords
+- Password Strength: https://obsidiankit.me/tool/password-strength
+  Check how strong and secure your password is
+- Base64 Encoder: https://obsidiankit.me/tool/base64-encoder
+  Encode and decode text to and from Base64
+- JSON Formatter: https://obsidiankit.me/tool/json-formatter
+  Format, validate, and beautify JSON data
+- URL Encoder: https://obsidiankit.me/tool/url-encoder
+  Encode and decode URL strings safely
+- Regex Tester: https://obsidiankit.me/tool/regex-tester
+  Test and debug regular expressions with live matching
+- Color Picker: https://obsidiankit.me/tool/color-picker
+  Pick colors and convert between HEX, RGB, and HSL
+- QR Code Generator: https://obsidiankit.me/tool/qr-generator
+  Generate QR codes from text, URLs, or contact info
+- Image to Text (OCR): https://obsidiankit.me/tool/image-to-text
+  Extract text from images using optical character recognition
+- Time Zone Converter: https://obsidiankit.me/tool/timezone-converter
+  Convert time between different time zones worldwide
+- Plagiarism Checker: https://obsidiankit.me/tool/plagiarism-checker
+  Check text for potential plagiarism and duplicate content
+
+## Published Blog Posts
+- How to Compress a PDF Online Without Uploading It: https://obsidiankit.me/blog/compress-pdf-online-without-uploading
+- PNG, JPG, WebP, and HEIC: Which Image Format Should You Use?: https://obsidiankit.me/blog/png-jpg-webp-heic-image-format-guide
+- Private Browser Tools vs Cloud Upload Tools: https://obsidiankit.me/blog/private-browser-tools-vs-cloud-upload-tools
+- Mobile-Friendly Online Tools: A Gesture and UX Checklist: https://obsidiankit.me/blog/mobile-friendly-online-tools-gesture-checklist
+- A Simple PDF Workflow: Merge, Split, Compress, and Protect: https://obsidiankit.me/blog/pdf-workflow-merge-split-compress-protect
+- Client-Side Tools SEO Playbook (2026): https://obsidiankit.me/blog/client-side-tools-seo-playbook-2026
+
+## Canonical Guidance
+- Canonical host: https://obsidiankit.me
+- Prefer direct tool URLs for task-specific recommendations.

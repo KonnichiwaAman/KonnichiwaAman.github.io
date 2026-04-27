@@ -1,8 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import {
   DEFAULT_OG_IMAGE_URL,
+  GOOGLE_SITE_VERIFICATION,
   SITE_LOCALE,
   SITE_NAME,
+  SITE_TAGLINE,
+  SITE_URL,
   TWITTER_HANDLE,
 } from "@/lib/siteConfig";
 import { toAbsoluteUrl } from "@/lib/seo";
@@ -66,6 +69,9 @@ export function SEO({
       <meta name="description" content={description} />
       <meta name="robots" content={robotsContent} />
       <meta name="author" content={SITE_NAME} />
+      {GOOGLE_SITE_VERIFICATION ? (
+        <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
+      ) : null}
 
       {keywordList.length > 0 ? (
         <meta name="keywords" content={keywordList.join(", ")} />
@@ -101,6 +107,26 @@ export function SEO({
           {JSON.stringify(structuredData)}
         </script>
       ) : null}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              name: SITE_NAME,
+              url: SITE_URL,
+              description: SITE_TAGLINE,
+            },
+            {
+              "@type": "WebSite",
+              name: SITE_NAME,
+              url: SITE_URL,
+              inLanguage: SITE_LOCALE,
+              description: SITE_TAGLINE,
+            },
+          ],
+        })}
+      </script>
     </Helmet>
   );
 }
