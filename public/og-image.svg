@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">ObsidianKit</title>
+  <desc id="desc">Private browser tools for PDF, image, video, and calculator workflows.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060606" />
+      <stop offset="100%" stop-color="#111111" />
+    </linearGradient>
+    <radialGradient id="glow-left" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(140 120) rotate(28) scale(420 320)">
+      <stop offset="0%" stop-color="#6e6e6e" stop-opacity="0.28" />
+      <stop offset="70%" stop-color="#6e6e6e" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#6e6e6e" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-right" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(980 470) rotate(-30) scale(460 340)">
+      <stop offset="0%" stop-color="#9f9f9f" stop-opacity="0.18" />
+      <stop offset="70%" stop-color="#9f9f9f" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#9f9f9f" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4f4f5" />
+      <stop offset="100%" stop-color="#b3b3b3" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#glow-left)" />
+  <rect width="1200" height="630" fill="url(#glow-right)" />
+  <circle cx="170" cy="140" r="54" fill="#f4f4f5" fill-opacity="0.07" />
+  <circle cx="1040" cy="490" r="88" fill="#f4f4f5" fill-opacity="0.05" />
+  <rect x="78" y="76" width="1044" height="478" rx="36" fill="#0d0d0d" fill-opacity="0.72" stroke="#2a2a2a" stroke-width="1.5" />
+
+  <text x="116" y="176" fill="url(#accent)" font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="0.24em">OBSIDIANKIT</text>
+  <text x="116" y="298" fill="#f4f4f5" font-family="Cormorant Garamond, Georgia, serif" font-size="84" font-weight="700">Private browser tools</text>
+  <text x="116" y="376" fill="#d4d4d8" font-family="Manrope, Arial, sans-serif" font-size="42" font-weight="500">PDF, image, video, and calculator workflows.</text>
+  <text x="116" y="438" fill="#a1a1aa" font-family="Manrope, Arial, sans-serif" font-size="24" font-weight="500">No uploads. No sign-up. Built for fast, client-side work.</text>
+
+  <g transform="translate(116 484)">
+    <rect width="210" height="50" rx="25" fill="#f4f4f5" fill-opacity="0.08" stroke="#e4e4e7" stroke-opacity="0.18" />
+    <text x="24" y="32" fill="#f4f4f5" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">Local by design</text>
+  </g>
+  <g transform="translate(340 484)">
+    <rect width="204" height="50" rx="25" fill="#f4f4f5" fill-opacity="0.08" stroke="#e4e4e7" stroke-opacity="0.18" />
+    <text x="24" y="32" fill="#f4f4f5" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700">Private workflows</text>
+  </g>
+</svg>

@@ -119,13 +119,16 @@ export function HomePage() {
               </div>
 
               <h1 className="home-hero-serif max-w-4xl text-balance text-5xl font-semibold leading-[0.95] tracking-tight text-[var(--color-text-primary)] sm:text-6xl lg:text-8xl">
-                Precision Tools.
-                <span className="block text-[0.92em] text-[var(--color-text-secondary)]">Quiet Luxury.</span>
+                Precision Tools for
+                <span className="block text-[0.92em] text-[var(--color-text-secondary)]">
+                  Private PDF, Image, Video, and Text Workflows.
+                </span>
               </h1>
 
               <p className="mt-6 max-w-3xl text-pretty text-sm leading-relaxed text-[var(--color-text-secondary)] sm:text-base lg:text-lg">
-                A premium browser workspace for modern utility work. {totalTools}+ polished tools,
-                instant performance, and full on-device privacy.
+                A premium browser workspace for modern utility work. {totalTools}+ free tools across
+                {categories.length} categories, including PDF compression, image conversion, video
+                trimming, and everyday calculators, all processed locally on your device.
               </p>
 
               <div className="mt-9 flex w-full max-w-xl flex-col gap-3 sm:flex-row">

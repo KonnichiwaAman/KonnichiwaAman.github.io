@@ -148,6 +148,7 @@ export function ToolPage() {
           <ToolSeoContent
             toolName={tool.name}
             categoryName={category?.name ?? "Utilities"}
+            categoryPath={category?.path ?? "/tools"}
             toolDescription={tool.description}
           />
 
