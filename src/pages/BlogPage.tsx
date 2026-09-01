@@ -50,6 +50,14 @@ export function BlogPage() {
                     </span>
                     <span>/</span>
                     <span>{post.readingMinutes} min read</span>
+                    <span>/</span>
+                    <span>By {post.author}</span>
+                    {post.updatedAt ? (
+                      <>
+                        <span>/</span>
+                        <span>Updated {post.updatedAt}</span>
+                      </>
+                    ) : null}
                   </div>
 
                   <h2 className="mt-3 text-xl font-bold tracking-tight text-[var(--color-text-primary)]">

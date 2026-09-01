@@ -12,8 +12,11 @@ export interface BlogPost {
   readingMinutes: number;
   tags: string[];
   isPublished: boolean;
+  author: string;
   sections: BlogSection[];
 }
+
+const DEFAULT_BLOG_AUTHOR = "ObsidianKit Editorial Team";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -25,6 +28,7 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 7,
     tags: ["PDF Compressor", "Privacy", "Local Processing", "File Optimization"],
     isPublished: true,
+    author: DEFAULT_BLOG_AUTHOR,
     sections: [
       {
         heading: "Why no-upload compression matters",
@@ -60,6 +64,7 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 8,
     tags: ["Image Converter", "PNG", "JPG", "WebP", "HEIC"],
     isPublished: true,
+    author: DEFAULT_BLOG_AUTHOR,
     sections: [
       {
         heading: "Use PNG for sharp graphics and transparency",
@@ -100,6 +105,7 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 6,
     tags: ["Privacy", "Browser Tools", "Security", "Productivity"],
     isPublished: true,
+    author: DEFAULT_BLOG_AUTHOR,
     sections: [
       {
         heading: "The biggest difference is where the file goes",
@@ -133,6 +139,7 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 7,
     tags: ["Mobile UX", "Gestures", "Accessibility", "Performance"],
     isPublished: true,
+    author: DEFAULT_BLOG_AUTHOR,
     sections: [
       {
         heading: "Give every gesture enough room",
@@ -166,6 +173,7 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 6,
     tags: ["PDF Tools", "Merge PDF", "Split PDF", "Protect PDF"],
     isPublished: true,
+    author: DEFAULT_BLOG_AUTHOR,
     sections: [
       {
         heading: "Start by organizing the source files",
@@ -200,6 +208,7 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 8,
     tags: ["SEO", "Core Web Vitals", "Monetization", "Client-Side"],
     isPublished: true,
+    author: DEFAULT_BLOG_AUTHOR,
     sections: [
       {
         heading: "1. Build SEO as a system, not a checklist",

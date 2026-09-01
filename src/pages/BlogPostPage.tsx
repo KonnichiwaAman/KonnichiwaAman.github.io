@@ -46,9 +46,19 @@ export function BlogPostPage() {
         </Link>
 
         <header className="mt-5 rounded-3xl border border-[var(--color-border-primary)] bg-[var(--color-bg-card)] p-6 sm:p-8">
-          <p className="text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
-            {post.publishedAt} / {post.readingMinutes} min read
-          </p>
+          <div className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
+            <span>{post.publishedAt}</span>
+            <span>/</span>
+            <span>{post.readingMinutes} min read</span>
+            <span>/</span>
+            <span>By {post.author}</span>
+            {post.updatedAt ? (
+              <>
+                <span>/</span>
+                <span>Updated {post.updatedAt}</span>
+              </>
+            ) : null}
+          </div>
           <h1 className="mt-3 text-2xl font-black tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
             {post.title}
           </h1>
@@ -80,6 +90,16 @@ export function BlogPostPage() {
             </section>
           ))}
         </div>
+
+        <section className="mt-8 rounded-2xl border border-[var(--color-border-primary)] bg-[var(--color-bg-card)] p-5 sm:p-6">
+          <h2 className="text-lg font-bold tracking-tight text-[var(--color-text-primary)]">
+            Editorial note
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)] sm:text-base">
+            This article is maintained by {post.author} and updated when the workflow,
+            product behavior, or search guidance changes.
+          </p>
+        </section>
       </article>
     </>
   );

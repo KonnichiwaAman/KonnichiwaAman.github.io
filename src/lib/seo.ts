@@ -356,6 +356,7 @@ interface BlogSeoPostInput {
   tags: string[];
   publishedAt: string;
   updatedAt?: string;
+  author: string;
 }
 
 export function buildBlogIndexSeo(publishedPostCount: number): SeoMetadata {
@@ -417,9 +418,8 @@ export function buildBlogPostSeo(post: BlogSeoPostInput): SeoMetadata {
         mainEntityOfPage: canonicalUrl,
         inLanguage: SITE_LOCALE,
         author: {
-          "@type": "Organization",
-          name: SITE_NAME,
-          url: SITE_URL,
+          "@type": "Person",
+          name: post.author,
         },
         publisher: {
           "@type": "Organization",

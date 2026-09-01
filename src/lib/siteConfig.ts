@@ -35,7 +35,7 @@ export const SITE_TAGLINE = "Fast, private, browser-based tools that run entirel
 export const SITE_LOCALE = "en";
 export const SITE_URL = normalizeSiteUrl(runtimeEnv.VITE_SITE_URL ?? runtimeEnv.SITE_URL);
 
-export const DEFAULT_OG_IMAGE_PATH = "/web-app-manifest-512x512.png";
+export const DEFAULT_OG_IMAGE_PATH = "/og-image.svg";
 export const DEFAULT_OG_IMAGE_URL = `${SITE_URL}${DEFAULT_OG_IMAGE_PATH}`;
 
 export const TWITTER_HANDLE = runtimeEnv.VITE_TWITTER_HANDLE?.trim() ?? "";
