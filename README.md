@@ -1,3 +1,5 @@
+![ObsidianKit: private browser-native tools](docs/assets/social-preview.png)
+
 # ObsidianKit Deployment Source
 
 This repository is the active GitHub Pages deployment source for [ObsidianKit](https://github.com/amandeavor/ObsidianKit) and the `obsidiankit.me` custom domain.
